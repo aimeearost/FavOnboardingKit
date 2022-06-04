@@ -4,7 +4,7 @@ import UIKit
 
 public protocol FavOnboardingKitDelegate: AnyObject {
     func nextButtonDidTap(atIndex index: Int)
-    func getStartedDidTap()
+    func getStartedButtonDidTap()
 }
 
 public class FavOnboardingKit {
@@ -24,7 +24,7 @@ public class FavOnboardingKit {
             self?.delegate?.nextButtonDidTap(atIndex: index)
         }
         controller.getStartedButtonDidTap = { [weak self] in
-            self?.delegate?.getStartedDidTap()
+            self?.delegate?.getStartedButtonDidTap()
         }
         return controller
     }()
