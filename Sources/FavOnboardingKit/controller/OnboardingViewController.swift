@@ -10,7 +10,7 @@ import UIKit
 class OnboardingViewController: UIViewController {
 
     var nextButtonDidTap: ((Int) -> Void)?
-    var getStartedDidTap: (() -> Void)?
+    var getStartedButtonDidTap: (() -> Void)?
 
     private let slides: [Slide]
     private let tintColor: UIColor
@@ -31,7 +31,7 @@ class OnboardingViewController: UIViewController {
 
 
         }
-        view.getStartedButtonDidTap = getStartedDidTap
+        view.getStartedButtonDidTap = getStartedButtonDidTap
         return view
     }()
 
